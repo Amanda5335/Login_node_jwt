@@ -29,7 +29,7 @@ app.get("/user/:id", checkToken, async (req, res) => {
 })
 
 function checkToken(req, res, next) {
-  const authHeader = req.headers['autorization']
+  const authHeader =req.headers["authorization"];
   const token = authHeader && authHeader.split("")[1]
 
   if(!token) {
